@@ -13,7 +13,7 @@ from Pages.Contracts.Insurance import AddInsurance
 email = "95000125@yopmail.com"
 password = "1qazZAQ!"
 lang = "EN"
-base_url="http://sln-fcsk.seliselocal.com/"
+base_url="http://sln-fcsk.seliselocal.com"
 customer_id="customers/68785339-f152-4749-9c1f-41e79d1e9ba1/"
 
 
@@ -42,35 +42,9 @@ Login_page.click_Login()
 time.sleep(5)
 print("Login Successful")
 time.sleep(10)
-print("Which type of Contracts you want to create- \n 1.Insurance \n 2.Loan \n 3.Retirement \n 4.Investment \n 5.Others" )
+
+driver.get(base_url+"/contracts/insure")
 time.sleep(10)
-print("Enter Number -- ")
-contract_name = int(input())
-
-"""Customer End Contract Create Start"""
-if contract_name == 1:
-    driver.get(base_url+"/contracts/insure")
-    time.sleep(10)
-    Add_Insurance.click_addInsurance()
-    time.sleep(20)
-elif contract_name == 2:
-    driver.get(base_url+"/contracts/loan")
-    time.sleep(10)
-elif contract_name == 3:
-    driver.get(base_url+"/contracts/retirement")
-    time.sleep(10)
-elif contract_name == 4:
-    driver.get(base_url+"/contracts/investmentContract")
-    time.sleep(10)
-elif contract_name == 5:
-    driver.get(base_url+"/contracts/other-contract")
-    time.sleep(10)
-else:
-    print("Enter Wrong Number")
-    time.sleep(5)
-
-
-#driver.implicitly_wait(10)
-# Add_Insurance.click_addInsurance()
-# time.sleep(20)
+Add_Insurance.click_addInsurance()
+time.sleep(20)
 
