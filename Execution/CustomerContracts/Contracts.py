@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.service import Service
 import time
 from Pages.UAM.loginPage import Login
 from Pages.Contracts.Insurance import AddInsurance
+from Pages.Setting.PageLanguage import SelectLanguage
 
 '"""""""" Values  """"'
 # email = "fincentrumadmin@selise.ch"
@@ -25,7 +26,8 @@ driver.maximize_window()
 
 '""""""""Driver initialize """"'
 Login_page = Login(driver)
-Add_Insurance =AddInsurance(driver)
+Add_Insurance = AddInsurance(driver)
+Select_Language = SelectLanguage(driver)
 
 '"""""""" URL """"'
 # driver.get(base_url+customer_id)
@@ -50,7 +52,7 @@ time.sleep(10)
 
 driver.get(base_url+"/contracts/insure")
 time.sleep(20)
-Add_Insurance.enter_Language()
+Select_Language.enter_Language()
 time.sleep(20)
 # Add_Insurance.click_addInsurance()
 # time.sleep(20)
