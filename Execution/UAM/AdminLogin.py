@@ -8,7 +8,7 @@ from Pages.UAM.loginPage import Login
 
 '"""""""" Values  """"'
 email = "fincentrumadmin@selise.ch"
-password = "Helloworld@1"
+password = "slsnAEIOU-1"
 lang = "EN"
 
 
