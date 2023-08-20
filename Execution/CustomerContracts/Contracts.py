@@ -9,25 +9,25 @@ from Pages.Contracts.Insurance import AddInsurance
 from Pages.Setting.PageLanguage import SelectLanguage
 
 '"""""""" Values  """"'
-# email = "fincentrumadmin@selise.ch"
-# password = "Helloworld@1"
-email = "qarifat30@gmail.com"
-password = "slsnAEIOU-1"
+email = "fincentrumadmin@selise.ch"
+password = "Helloworld@1"
+# email = "qarifat30@gmail.com"
+# password = "slsnAEIOU-1"
 lang = "EN"
 lang_c = "EN"
-base_url="http://sln-fcsk.seliselocal.com"
-customer_id="customers/68785339-f152-4749-9c1f-41e79d1e9ba1/"
+base_url = "https://stage-sln-fcsk.selise.biz/"
+customer_id = "customers/68785339-f152-4749-9c1f-41e79d1e9ba1/"
 
 
 '"""""""" Chrome Driver Setup  """"'
-chrome_service = Service("C:\webdrivers\chromedriver_win32\chromedriver.exe")
+chrome_service = Service("C:\webdrivers\chromedriver-win32\chromedriver.exe")
 driver = webdriver.Chrome(service=chrome_service)
 driver.maximize_window()
 
 '""""""""Driver initialize """"'
 Login_page = Login(driver)
 Add_Insurance = AddInsurance(driver)
-Select_Language = SelectLanguage(driver)
+# Select_Language = SelectLanguage(driver)
 
 '"""""""" URL """"'
 # driver.get(base_url+customer_id)
@@ -50,18 +50,12 @@ time.sleep(10)
 # print("Enter Number -- ")
 # contract_name = int(input())
 
-driver.get(base_url+"/contracts/insure")
+driver.get(base_url+"contracts/insure")
 time.sleep(20)
 Select_Language.enter_Language()
 time.sleep(20)
 # Add_Insurance.click_addInsurance()
 # time.sleep(20)
-
-
-
-
-
-
 
 
 # """Customer End Contract Create Start"""

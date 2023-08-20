@@ -40,16 +40,6 @@ class AddInsurance:
         # # assert el.text == "Add Insure Contract"
 
         # print(self.driver.find_element("xpath", self.addButton_xpath))
-
-
-
-
-
-
-
-
-
-
         # self.driver.find_element("xpath", self.addButton_xpath).click()
         # WebDriverWait(self.driver, 20).until(EC.element_to_be_clickable((By.XPATH,self.addButton_xpath))).click()
 
