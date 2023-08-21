@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
-from getpass import getpass
 from selenium.webdriver.chrome.service import Service
 import time
 from Pages.UAM.loginPage import Login
